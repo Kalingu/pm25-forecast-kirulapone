@@ -50,7 +50,7 @@ N-BEATS PyTorch: https://github.com/philipperemy/n-beats
 
 ---
 
-✅ This is **everything you need** to push your repo to GitHub:  
+This is **everything you need** to push your repo to GitHub:  
 
 - `src/` with clean scripts  
 - `notebooks/` for workflow  
