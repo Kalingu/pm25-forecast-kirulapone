@@ -1,5 +1,7 @@
-PM2.5 Air Quality Forecasting for Kirulapone (Colombo)
-Predicting hourly PM2.5 pollution levels using time‑series deep learning models (LSTM and N‑BEATS) with key evaluation metrics. This project was completed as the final research project for the Higher National Diploma in Data Science (HNDDS) at NIBM.
+# PM2.5 Forecasting – Kirulapone, Colombo
+
+This project forecasts hourly PM2.5 air pollution levels in Kirulapone, Colombo using time‑series deep learning models (LSTM and N‑BEATS). Models are evaluated using RMSE, MAE, R², and MAPE. The goal is to provide a data‑driven forecasting solution for air quality monitoring as part of my Higher National Diploma in Data Science (HNDDS) research.
+
 
 ## Dataset
 
@@ -8,37 +10,22 @@ Predicting hourly PM2.5 pollution levels using time‑series deep learning model
 - **Number of records:** 24,864  
 - **Features:** 
   - **Target variable:** `pm2_5` (fine particulate matter)  
-  - **Other environmental variables:** `pm10`, `carbon_monoxide`, `carbon_dioxide`, `nitrogen_dioxide`, `sulphur_dioxide`, `ozone`, `aerosol_optical_depth`, `dust`, `uv_index`, `uv_index_clear_sky`, `ammonia`, `methane`  
+  - **Other variables:** `pm10`, `carbon_monoxide`, `carbon_dioxide`, `nitrogen_dioxide`, `sulphur_dioxide`, `ozone`, `aerosol_optical_depth`, `dust`, `uv_index`, `uv_index_clear_sky`, `ammonia`, `methane`  
 - **Data quality:** No missing values in the `pm2_5` column
-- 
 
-## Project Structure
-
-This project compares two forecasting approaches:
-- **LSTM (TensorFlow):** Long Short‑Term Memory network for sequential forecasting.
-- **N‑BEATS (PyTorch):** Neural basis expansion analysis for interpretable time‑series forecasting.
-
-## Features
-
-- Data Preprocessing: clipping, log transformation, scaling  
-- Sequence Creation: prepare time-series data for model input  
-- Deep Learning Models: LSTM and N-BEATS  
-- Evaluation Metrics: RMSE, MAE, R², MAPE  
-- Academic research project: part of **HNDDS final research at NIBM**
 
 ## Model Results - PM2.5 Forecasting
 
-The models were evaluated on standard metrics to predict hourly PM2.5 levels in Kirulapone.
+| Metric     | LSTM   | N‑BEATS |
+|------------|--------|---------|
+| MSE        | 4.5972 | 2.7522  |
+| RMSE       | 2.1441 | 1.6590  |
+| MAE        | 1.5150 | 1.1541  |
+| R²         | 0.9056 | 0.9435  |
+| MAPE (%)   | 10.6882 | 8.4915 |
 
-| Metric | LSTM | N-BEATS |
-|--------|------|---------|
-| MSE    | 4.5972 | 2.7522 |
-| RMSE   | 2.1441 | 1.6590 |
-| MAE    | 1.5150 | 1.1541 |
-| R²     | 0.9056 | 0.9435 |
-| MAPE (%) | 10.6882 | 8.4915 |
+**🏆 Winner:** N‑BEATS (best overall performance)
 
-**🏆 Winner:** N-BEATS (best overall performance on all metrics)
 
 ## Visualizations - LSTM Model/N-BEATS Model Training vs Validation Curve
 
@@ -46,9 +33,8 @@ The models were evaluated on standard metrics to predict hourly PM2.5 levels in 
 <img width="640" height="377" alt="image" src="https://github.com/user-attachments/assets/30c63374-91ae-4346-b22e-ee611c3b40cd" />
 
 
-## Usage
-
 ## How to Run
+
 1. Clone the repository  
    `git clone https://github.com/Kalingu/pm25-forecast-kirulapone.git`
 2. Install dependencies  
@@ -57,6 +43,14 @@ The models were evaluated on standard metrics to predict hourly PM2.5 levels in 
    `jupyter notebook notebooks/pm25_lstm_nbeats.ipynb`
 4. View results and plots
 
-## License
-This project is licensed under the MIT License — see LICENSE file for details.
 
+## Tech Stack
+- Python, Pandas, NumPy, Matplotlib
+- PyTorch (or TensorFlow)
+- Jupyter Notebook
+- Git/GitHub
+
+
+## License
+
+This project is licensed under the MIT License.
