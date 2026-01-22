@@ -1,5 +1,3 @@
-<img width="840" height="476" alt="image" src="https://github.com/user-attachments/assets/ee5634f6-2513-4aee-9ca0-082ecc72b2b1" /># PM2.5 Forecasting – Colombo (Kirulapone)
-
 PM2.5 Air Quality Forecasting for Kirulapone (Colombo)
 Predicting hourly PM2.5 pollution levels using time‑series deep learning models (LSTM and N‑BEATS) with key evaluation metrics. This project was completed as the final research project for the Higher National Diploma in Data Science (HNDDS) at NIBM.
 
